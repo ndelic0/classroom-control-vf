@@ -1,4 +1,4 @@
 class profile::example {
-  notify { 'This is the example profile!': }
+  notify { 'This is my example profile!': }
 }
 
