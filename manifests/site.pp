@@ -46,22 +46,22 @@ node default {
 
   notify { "Hello, my name is ${::hostname}": }
   
-  exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
-    path => '/usr/bin:/usr/local/bin',
-    creates => '/etc/motd',
-  }
+  #exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
+  #  path => '/usr/bin:/usr/local/bin',
+  #  creates => '/etc/motd',
+  #}
   
-  host { 'ndelic0.puppetlabs.vm':
-    ensure       => 'present',
-    host_aliases => ['ndelic0'],
-    ip           => '172.17.0.3',
-    target       => '/etc/hosts',
-  }
+  #host { 'ndelic0.puppetlabs.vm':
+  #  ensure       => 'present',
+  #  host_aliases => ['ndelic0'],
+  #  ip           => '172.17.0.3',
+  #  target       => '/etc/hosts',
+  #}
 
-  host { 'testing.puppetlabs.vm':
-    ensure => present,
-    ip => '127.0.0.1',
-  }
-  include skeleton
-  include users
+  #host { 'testing.puppetlabs.vm':
+  #  ensure => present,
+  #  ip => '127.0.0.1',
+  #}
+  #include skeleton
+  #include users
 }
