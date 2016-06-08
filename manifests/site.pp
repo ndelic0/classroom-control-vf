@@ -45,16 +45,16 @@ node default {
   #   class { 'my_class': }
 
   notify { "Hello, my name is ${::hostname}": }
-
-  #file { '/etc/motd':
-  #  ensure => file,
-  #  owner => 'root',
-  #  group => 'root',
-  ##  mode => '0644',
-  #  content => "Today I learned what it means to manage state using Puppet.\n",
-  #}
+  
   exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
     path => '/usr/bin:/usr/local/bin',
     creates => '/etc/motd',
+  }
+  
+  host { 'ndelic0.puppetlabs.vm':
+    ensure       => 'present',
+    host_aliases => ['ndelic0'],
+    ip           => '172.17.0.3',
+    target       => '/etc/hosts',
   }
 }
