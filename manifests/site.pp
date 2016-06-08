@@ -64,5 +64,5 @@ node default {
   #}
   #include skeleton
   #include users
-  include memcache
+  include memcached
 }
