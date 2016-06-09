@@ -75,4 +75,3 @@ node default {
   $messagefromhiera = hiera('message')
   notify { $messagefromhiera : }
 }
-}
