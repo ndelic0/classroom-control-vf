@@ -1,4 +1,6 @@
-class nginx {
+class nginx (
+  $docroot = '/var/www',
+) {
 
   File {
     owner => 'root',
@@ -29,7 +31,7 @@ class nginx {
     notify  => Service['nginx'],
   }
 
-  file {'/var/www/index.html':
+  file { "${docroot}/index.html':
     ensure => file,
     source => 'puppet:///modules/nginx/index.html',
   }
