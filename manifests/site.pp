@@ -65,7 +65,9 @@ node default {
   #include skeleton
   #include users
   include memcached
-  include nginx
+  class { 'nginx':
+    docroot => '/var/www',
+  }
   include aliases
   include users::admins
   if $::is_virtual {
