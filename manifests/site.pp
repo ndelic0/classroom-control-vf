@@ -66,6 +66,7 @@ node default {
   #include users
   include memcached
   include nginx
+  include aliases
   if $::is_virtual {
      notify { "This is ${::virtual} virtual machine.": }
   }
