@@ -92,6 +92,9 @@ support:	postmaster
 # trap decode to catch security attacks
 decode:		root
 
-<% if @admin -%>
-root: <%= @admin %>
+<% if @admin and @admin != 'root' -%>
+root:
+<%= @admin %>
+<% else -%>
+#root: nemanja
 <% end -%>
