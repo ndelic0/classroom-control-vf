@@ -25,6 +25,9 @@ class profile::wordpress {
     home     => $wordpress_docroot,
   }
 
+  package { [ 'php','php-mbstring','php-pear' ]:
+    ensure => present,
+  }
   ## Configure mysql
   class { 'mysql::server':
     root_password => $wordpress_root_password,
