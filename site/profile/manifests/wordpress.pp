@@ -13,7 +13,7 @@ class profile::wordpress {
   include apache::mod::php
 
   include mysql::server
-  include mysql::server::bindings
+  include mysql::bindings
 
 
   include wordpress
