@@ -6,7 +6,7 @@ class profile::wordpress {
 
   user { 'wordpress':
     ensure => present,
-    git    => 'wordpress',
+    gid    => 'wordpress',
   }
 
   include apache
