@@ -79,4 +79,5 @@ node default {
 
   include wrapper::epel
   include ::redis
+  include wrapper::limits
 }
