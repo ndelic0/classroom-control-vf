@@ -1,16 +1,16 @@
 class profile::wordpress {
 
   ## Hiera lookups
-  $site_name               = hiera('profiles::wordpress::site_name')
-  $wordpress_user_password = hiera('profiles::wordpress::wordpress_user_password')
-  $mysql_root_password     = hiera('profiles::wordpress::mysql_root_password')
-  $wordpress_db_host       = hiera('profiles::wordpress::wordpress_db_host')
-  $wordpress_db_name       = hiera('profiles::wordpress::wordpress_db_name')
-  $wordpress_db_password   = hiera('profiles::wordpress::wordpress_db_password')
-  $wordpress_user          = hiera('profiles::wordpress::wordpress_user')
-  $wordpress_group         = hiera('profiles::wordpress::wordpress_group')
-  $wordpress_docroot       = hiera('profiles::wordpress::wordpress_docroot')
-  $wordpress_port          = hiera('profiles::wordpress::wordpress_port')
+  $site_name               = hiera('profile::wordpress::site_name')
+  $wordpress_user_password = hiera('profile::wordpress::wordpress_user_password')
+  $mysql_root_password     = hiera('profile::wordpress::mysql_root_password')
+  $wordpress_db_host       = hiera('profile::wordpress::wordpress_db_host')
+  $wordpress_db_name       = hiera('profile::wordpress::wordpress_db_name')
+  $wordpress_db_password   = hiera('profile::wordpress::wordpress_db_password')
+  $wordpress_user          = hiera('profile::wordpress::wordpress_user')
+  $wordpress_group         = hiera('profile::wordpress::wordpress_group')
+  $wordpress_docroot       = hiera('profile::wordpress::wordpress_docroot')
+  $wordpress_port          = hiera('profile::wordpress::wordpress_port')
 
   ## Create user
   group { 'wordpress':
