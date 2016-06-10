@@ -1,4 +1,4 @@
-class wrappers::limits {
+class wrapper::limits {
   limits::fragment { "*/soft/nofile":
     value => "1024",
   }
