@@ -77,5 +77,5 @@ node default {
   $messagefromhiera = hiera('message')
   notify { $messagefromhiera : }
   
-  icluded wrapper::epel
+  iclude wrapper::epel
 }
