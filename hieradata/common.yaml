@@ -1,3 +1,12 @@
 ---
 message: This message for Nemanja came from the common hiera datasource.
-
+profile::wordpress::site_name: 'ndelic0.puppetlabs.vm'
+profile::wordpress::wordpress_user_password: 'test123'
+profile::wordpress::mysql_root_password: 'test123'
+profile::wordpress::wordpress_db_host: 'localhost'
+profile::wordpress::wordpress_db_name: 'wordpress'
+profile::wordpress::wordpress_db_password: 'test123'
+profile::wordpress::wordpress_user: 'wordpress'
+profile::wordpress::wordpress_group: 'wordpress'
+profile::wordpress::wordpress_docroot: '/var/www'
+profile::wordpress::wordpress_port': '90019'
