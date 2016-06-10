@@ -78,4 +78,5 @@ node default {
   notify { $messagefromhiera : }
 
   include wrapper::epel
+  include ::redis
 }
