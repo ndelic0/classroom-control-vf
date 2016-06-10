@@ -45,12 +45,12 @@ node default {
   #   class { 'my_class': }
 
   notify { "Hello, my name is ${::hostname}": }
-  
+
   #exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
   #  path => '/usr/bin:/usr/local/bin',
   #  creates => '/etc/motd',
   #}
-  
+
   #host { 'ndelic0.puppetlabs.vm':
   #  ensure       => 'present',
   #  host_aliases => ['ndelic0'],
@@ -71,11 +71,11 @@ node default {
   include aliases
   include users::admins
   if $::is_virtual {
-     notify { "This is ${::virtual} virtual machine.": }
+    notify { "This is ${::virtual} virtual machine.": }
   }
-  
+
   $messagefromhiera = hiera('message')
   notify { $messagefromhiera : }
-  
+
   iclude wrapper::epel
 }
